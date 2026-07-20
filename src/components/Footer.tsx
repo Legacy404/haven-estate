@@ -5,7 +5,7 @@ import { useRef } from 'react';
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);
   const bottomTriggerRef = useRef<HTMLDivElement>(null);
-  const reachedPageBottom = useInView(bottomTriggerRef, { once: true, amount: 1 });
+  const reachedPageBottom = useInView(bottomTriggerRef, { amount: 1 });
 
   return (
     <motion.footer
