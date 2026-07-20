@@ -74,7 +74,7 @@ export default function Experiences() {
                   fontWeight: 500,
                   fontSize: '0.75rem',
                   letterSpacing: '0.2em',
-                  color: 'var(--accent)',
+                  color: 'var(--blush)',
                   textTransform: 'uppercase'
                 }}
               >
