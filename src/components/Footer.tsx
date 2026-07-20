@@ -1,12 +1,38 @@
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function Footer() {
+  const footerRef = useRef<HTMLElement>(null);
+  const bottomTriggerRef = useRef<HTMLDivElement>(null);
+  const reachedPageBottom = useInView(bottomTriggerRef, { amount: 1 });
+
   return (
-    <footer className="footer-wrap">
+    <motion.footer
+      ref={footerRef}
+      className="footer-wrap"
+      initial={false}
+      animate={{
+        paddingTop: 0,
+        paddingRight: reachedPageBottom ? 40 : 0,
+        paddingBottom: reachedPageBottom ? 40 : 0,
+        paddingLeft: reachedPageBottom ? 40 : 0,
+      }}
+      transition={{ duration: 1.45, ease: [0.76, 0, 0.24, 1] }}
+    >
       {/* Clean thin white border edge surrounding the entire footer component content */}
-      <div 
+      <motion.div 
         className="footer-inner"
-        style={{ backgroundImage: `url('/footer-estate.png')` }}
+        style={{
+          backgroundImage: `url('/footer-estate.png')`,
+          transformOrigin: 'bottom center',
+        }}
+        initial={false}
+        animate={{
+          borderRadius: reachedPageBottom ? 4 : 0,
+          scale: reachedPageBottom ? 1 : 1.015,
+        }}
+        transition={{ duration: 1.45, ease: [0.76, 0, 0.24, 1] }}
       >
         {/* Dark overlay to ensure readability */}
         <div className="footer-overlay" />
@@ -31,7 +57,7 @@ export default function Footer() {
             <div className="font-sans font-medium text-sm text-gray-300" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <MapPin style={{ width: '1rem', height: '1rem', color: 'rgba(255,255,255,0.6)', flexShrink: 0 }} />
-                <span>100 Riverfront Drive, York Haven, PA 17370</span>
+                <span className="address-two-lines">100 Riverfront Drive,<br />York Haven, PA 17370</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Phone style={{ width: '1rem', height: '1rem', color: 'rgba(255,255,255,0.6)', flexShrink: 0 }} />
@@ -112,15 +138,16 @@ export default function Footer() {
           <h2 
             className="footer-logo-text"
             style={{ 
-              fontSize: 'min(18vw, 240px)',
-              letterSpacing: '-0.03em',
+              fontSize: 'min(13vw, 180px)',
+              letterSpacing: '-0.055em',
               fontWeight: 300,
             }}
           >
-            HAVEN
+            HAVEN ESTATE
           </h2>
         </div>
-      </div>
-    </footer>
+      </motion.div>
+      <div ref={bottomTriggerRef} className="footer-bottom-trigger" aria-hidden="true" />
+    </motion.footer>
   );
 }
