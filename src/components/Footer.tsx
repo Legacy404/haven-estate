@@ -66,7 +66,7 @@ export default function Footer() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Mail style={{ width: '1rem', height: '1rem', color: 'rgba(255,255,255,0.6)', flexShrink: 0 }} />
-                <span>hello@thehavenestate.com</span>
+                <a href="mailto:yorkhavenestate@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>yorkhavenestate@gmail.com</a>
               </div>
             </div>
           </div>
