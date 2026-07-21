@@ -6,8 +6,9 @@ import Footer from './components/Footer';
 import { AudienceFit, BookingSteps, EstateInventory, LocationStory, ServicesCanvas } from './components/ValueSections';
 import { ArrowDownRight, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import ComingSoon from './components/ComingSoon';
 
-function App() {
+function EstateSite() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -112,6 +113,11 @@ function App() {
       <Footer />
     </div>
   );
+}
+
+function App() {
+  const showFullSite = window.location.pathname.replace(/\/$/, '') === '/venue';
+  return showFullSite ? <EstateSite /> : <ComingSoon />;
 }
 
 export default App;

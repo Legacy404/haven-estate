@@ -21,7 +21,11 @@ export function AudienceFit() {
       <p>The Haven Estate is for couples who want the beauty and intention of an elegant wedding—without the enormous guest list, complicated venue logistics, or traditional venue price tag.</p>
     </motion.div>
     <div className="audience-grid">{audience.map(([number, title, copy]) => <motion.article key={number} variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}><span>{number}</span><h3>{title}</h3><p>{copy}</p></motion.article>)}</div>
-    <div className="hero-intro-marquee" aria-hidden="true"><div className="hero-intro-marquee-track"><span>HAVEN ESTATE</span><span>HAVEN ESTATE</span><span>HAVEN ESTATE</span><span>HAVEN ESTATE</span></div></div>
+    <div className="hero-intro-marquee" aria-hidden="true">
+      <div className="hero-intro-marquee-track">
+        {[0, 1].map(group => <div className="hero-intro-marquee-group" key={group}><span>HAVEN ESTATE</span><span>HAVEN ESTATE</span></div>)}
+      </div>
+    </div>
   </section>;
 }
 
@@ -48,7 +52,7 @@ export function ServicesCanvas() {
   ];
 
   return <section className="canvas-section">
-    <div className="canvas-image"><img src="/experience-manor.png" alt="Neutral historic interiors at The Haven Estate" /><div className="canvas-image-label">HISTORIC CHARACTER · YOUR PERSONAL STYLE</div></div>
+    <div className="canvas-image"><img src="/experience-manor.png" alt="Neutral historic interiors at The Haven Estate" loading="lazy" decoding="async" /><div className="canvas-image-label">HISTORIC CHARACTER · YOUR PERSONAL STYLE</div></div>
     <div className="canvas-copy"><span className="section-eyebrow">A TURN-KEY BLANK CANVAS</span><h2>The freedom to make it yours.<br /><em>The support to make it simple.</em></h2><p>Begin with timeless architecture, neutral interiors, open lawns, and flexible gathering spaces. Add the details that tell your story without competing with an overly themed venue.</p><div className="service-list">{services.map(({ icon: Icon, title, copy }) => <article key={title}><Icon /><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div></div>
   </section>;
 }
@@ -57,7 +61,7 @@ export function LocationStory() {
   return <section className="location-section">
     <div className="location-copy"><span className="section-eyebrow">YORK HAVEN, PENNSYLVANIA</span><h2>Destination atmosphere.<br /><em>Close-to-home ease.</em></h2><p>Set along the Susquehanna River, The Haven Estate feels peacefully removed while remaining within reach of York, Harrisburg, Lancaster, and Baltimore.</p><div className="location-address"><MapPin /><div><strong>THE HAVEN ESTATE</strong><span className="address-two-lines">100 Riverfront Drive,<br />York Haven, PA 17370</span></div></div></div>
     <div className="estate-map estate-map--site-plan">
-      <img src="/haven-estate-site-plan.png" alt="Site plan for The Haven Estate showing the house, ceremony aisle, formal garden, outdoor reception area, event lawn, parking, and property boundary" />
+      <img src="/haven-estate-site-plan.png" alt="Site plan for The Haven Estate showing the house, ceremony aisle, formal garden, outdoor reception area, event lawn, parking, and property boundary" loading="lazy" decoding="async" />
     </div>
   </section>;
 }
