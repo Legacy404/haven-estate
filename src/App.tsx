@@ -7,6 +7,7 @@ import { AudienceFit, BookingSteps, EstateInventory, LocationStory, ServicesCanv
 import { ArrowDownRight, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import ComingSoon from './components/ComingSoon';
+import { Analytics } from '@vercel/analytics/react';
 
 function EstateSite() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -117,7 +118,10 @@ function EstateSite() {
 
 function App() {
   const showFullSite = window.location.pathname.replace(/\/$/, '') === '/venue';
-  return showFullSite ? <EstateSite /> : <ComingSoon />;
+  return <>
+    {showFullSite ? <EstateSite /> : <ComingSoon />}
+    <Analytics />
+  </>;
 }
 
 export default App;
