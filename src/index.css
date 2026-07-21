@@ -81,12 +81,18 @@ h1, h2, h3, h4, h5, h6 {
 .coming-soon-actions { position:absolute; z-index:2; right:clamp(1.25rem,5vw,5rem); bottom:4.75rem; width:min(760px,calc(100% - 2.5rem)); display:flex; align-items:flex-end; gap:1.5rem; }
 .coming-soon-signup { flex:1; min-width:0; }
 .coming-soon-signup label { display:block; margin-bottom:.65rem; color:rgba(255,255,255,.72); font:500 .72rem var(--sans); letter-spacing:.13em; text-transform:uppercase; }
-.coming-soon-signup>div { display:flex; border-bottom:1px solid rgba(255,255,255,.58); }
-.coming-soon-signup input { min-width:0; flex:1; padding:.8rem 0; color:#fff; background:transparent; border:0; outline:0; font:500 .78rem var(--sans); letter-spacing:.13em; }
+.coming-soon-signup .signup-row { display:flex; align-items:flex-end; gap:1rem; }
+.coming-soon-signup .signup-fields { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); flex:1; gap:1rem; }
+.coming-soon-signup input { min-width:0; width:100%; padding:.8rem 0; color:#fff; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,.58); outline:0; font:500 .72rem var(--sans); letter-spacing:.1em; }
 .coming-soon-signup input::placeholder { color:rgba(255,255,255,.55); }
 .coming-soon-signup button,.coming-soon-contact { display:inline-flex; align-items:center; gap:.5rem; color:#fff; background:transparent; border:0; font:600 .7rem var(--sans); letter-spacing:.14em; text-decoration:none; white-space:nowrap; cursor:pointer; }
 .coming-soon-signup button svg,.coming-soon-contact svg { width:14px; height:14px; }
-.coming-soon-signup button { padding:.7rem 0 .7rem 1rem; }
+.coming-soon-signup button { padding:.7rem 0; }
+.coming-soon-signup button:disabled,.footer-form button:disabled { opacity:.6; cursor:wait; }
+.signup-response-frame { position:absolute; width:0; height:0; border:0; visibility:hidden; }
+.signup-success { display:flex; flex-direction:column; justify-content:flex-end; min-height:3.5rem; color:#fff; }
+.signup-success strong { font:500 .78rem var(--sans); letter-spacing:.14em; text-transform:uppercase; }
+.signup-success span { margin-top:.4rem; color:rgba(255,255,255,.72); font:400 .85rem var(--sans); }
 .coming-soon-contact { padding:.7rem 0; border-bottom:1px solid rgba(255,255,255,.58); }
 .coming-soon-footer { position:absolute; z-index:2; right:2rem; bottom:1.5rem; left:2rem; display:grid; grid-template-columns:minmax(140px,320px) auto; justify-content:end; align-items:center; gap:2rem; color:rgba(255,255,255,.62); }
 .coming-soon-progress { height:1px; background:rgba(255,255,255,.3); overflow:hidden; }
@@ -103,6 +109,8 @@ h1, h2, h3, h4, h5, h6 {
   .coming-soon-kicker { margin-bottom:1rem; font-size:.76rem; line-height:1.6; }
   .coming-soon-headline { min-height:3em; font-size:clamp(3.5rem,16vw,5.4rem); line-height:.86; }
   .coming-soon-copy { margin-top:1.5rem; font-size:1.2rem; line-height:1.5; }
+  .coming-soon-signup .signup-row { align-items:stretch; flex-direction:column; gap:.6rem; }
+  .coming-soon-signup .signup-fields { grid-template-columns:1fr; gap:.15rem; }
   .coming-soon-actions { right:1.25rem; bottom:4.5rem; left:1.25rem; width:auto; display:block; }
   .coming-soon-contact { margin-top:.8rem; }
   .coming-soon-signup label { line-height:1.5; }
@@ -480,6 +488,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
+.footer-form { flex-direction:column; }
+.footer-form .signup-row,.footer-form .signup-fields { display:flex; width:100%; flex-direction:column; }
+.footer-form .signup-fields { gap:.15rem; }
+.footer-form button { align-self:flex-end; padding:.75rem 0; }
+.footer-form.signup-success { border-bottom:0; }
 .footer-form input {
   flex-grow: 1;
   background: transparent;

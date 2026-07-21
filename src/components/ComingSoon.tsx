@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import type { FormEvent } from 'react';
 import { useEffect, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import MailerLiteSignup from './MailerLiteSignup';
 
 const images = [
   { src: '/1.PNG', alt: 'The Haven Estate wedding concept' },
@@ -38,12 +38,6 @@ export default function ComingSoon() {
       window.clearTimeout(introTimer);
     };
   }, []);
-
-  const handleSignup = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const email = String(new FormData(event.currentTarget).get('email') || '');
-    window.location.href = `mailto:hello@thehavenestate.com?subject=${encodeURIComponent('Please add me to The Haven Estate early list')}&body=${encodeURIComponent(`Please add ${email} to the early-access list for venue news, tours, and opening dates.`)}`;
-  };
 
   return <main className="coming-soon">
     <AnimatePresence>
@@ -133,10 +127,13 @@ export default function ComingSoon() {
     </section>
 
     <motion.div className="coming-soon-actions" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.25 }}>
-      <form className="coming-soon-signup" onSubmit={handleSignup}>
-        <label htmlFor="coming-soon-email">Be first to hear about tours and opening dates.</label>
-        <div><input id="coming-soon-email" name="email" type="email" placeholder="YOUR EMAIL ADDRESS" autoComplete="email" required /><button type="submit">JOIN THE EARLY LIST <ArrowUpRight /></button></div>
-      </form>
+      <MailerLiteSignup
+        className="coming-soon-signup"
+        formId="coming-soon"
+        label="Receive restoration updates, opening packages, first-tour invitations, and early access to our inaugural wedding dates."
+        buttonText="JOIN THE FIRST LOOK LIST"
+        showArrow
+      />
       <a className="coming-soon-contact" href="mailto:hello@thehavenestate.com">CONTACT THE ESTATE <ArrowUpRight /></a>
     </motion.div>
 
