@@ -51,7 +51,7 @@ export default function ComingSoon() {
         className="coming-soon-intro"
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0, transition: { duration: .72, delay: .68, ease: 'easeInOut' } }}
+        exit={{ opacity: 0, transition: { duration: .78, delay: .42, ease: [0.45, 0, 0.55, 1] } }}
         transition={{ duration: 1.05, ease: 'easeInOut' }}
       >
         <div>
@@ -63,7 +63,7 @@ export default function ComingSoon() {
               alt=""
               initial={{ width: 0, height: 0, opacity: 0, scale: .88 }}
               animate={{ width: 'clamp(72px,11vw,170px)', height: 'clamp(72px,11vw,170px)', opacity: 1, scale: 1 }}
-              exit={{ zIndex: 2, width: '100vw', height: '100vh', opacity: 1, scale: 1, transition: { duration: 1.35, ease: [0.76, 0, 0.24, 1] } }}
+              exit={{ zIndex: 2, width: '102vw', height: '102vh', opacity: 1, scale: 1, transition: { duration: 1.45, ease: [0.76, 0, 0.24, 1] } }}
               transition={{ width: { duration: 1.05, delay: 1.45, ease: [0.76, 0, 0.24, 1] }, height: { duration: 1.05, delay: 1.45, ease: [0.76, 0, 0.24, 1] }, opacity: { duration: .8, delay: 1.65 }, scale: { duration: 1, delay: 1.45, ease: [0.16, 1, 0.3, 1] } }}
             />
             <motion.strong initial={{ opacity: 0, x: '22vw' }} animate={{ opacity: 1, x: 0 }} exit={{ x: '110vw', opacity: 0, transition: { duration: 1.35, ease: [0.76, 0, 0.24, 1] } }} transition={{ duration: 1.35, delay: .32, ease: [0.16, 1, 0.3, 1] }}>Estate</motion.strong>
