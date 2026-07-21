@@ -130,7 +130,7 @@ export default function ComingSoon() {
       <MailerLiteSignup
         className="coming-soon-signup"
         formId="coming-soon"
-        label="Receive restoration updates, opening packages, first-tour invitations, and early access to our inaugural wedding dates."
+        label="Sign up to receive our First Look Book and updates on the estate’s progress."
         buttonText="JOIN THE FIRST LOOK LIST"
         showArrow
       />

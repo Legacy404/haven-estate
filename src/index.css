@@ -78,11 +78,11 @@ h1, h2, h3, h4, h5, h6 {
 .coming-soon-headline span,.coming-soon-headline em { display:block; }
 .coming-soon-headline em { color:var(--blush); font-weight:300; }
 .coming-soon-copy { max-width:1100px; margin:2rem 0 0; color:rgba(255,255,255,.88); font:400 clamp(1.35rem,2.1vw,1.8rem)/1.5 var(--serif); text-align:left; }
-.coming-soon-actions { position:absolute; z-index:2; right:clamp(1.25rem,5vw,5rem); bottom:4.75rem; left:clamp(1.25rem,5vw,5rem); width:auto; display:flex; align-items:flex-end; gap:clamp(1.5rem,2.5vw,3rem); }
+.coming-soon-actions { position:absolute; z-index:2; right:clamp(1.25rem,5vw,5rem); bottom:4.75rem; width:min(1050px,calc(100% - 2.5rem)); display:flex; align-items:flex-end; gap:clamp(1.5rem,2.5vw,3rem); }
 .coming-soon-signup { flex:1; min-width:0; }
 .coming-soon-signup label { display:block; margin-bottom:.65rem; color:rgba(255,255,255,.72); font:500 .72rem var(--sans); letter-spacing:.13em; text-transform:uppercase; }
 .coming-soon-signup .signup-row { display:flex; align-items:flex-end; gap:1rem; }
-.coming-soon-signup .signup-fields { display:grid; grid-template-columns:repeat(3,minmax(145px,1fr)); flex:1; gap:clamp(1rem,1.5vw,2rem); }
+.coming-soon-signup .signup-fields { display:grid; grid-template-columns:repeat(3,175px); flex:none; gap:clamp(1rem,1.5vw,2rem); }
 .coming-soon-signup input { min-width:0; width:100%; padding:.8rem 0; color:#fff; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,.58); outline:0; font:500 .72rem var(--sans); letter-spacing:.1em; }
 .coming-soon-signup input::placeholder { color:rgba(255,255,255,.55); }
 .coming-soon-signup button,.coming-soon-contact { display:inline-flex; align-items:center; gap:.5rem; color:#fff; background:transparent; border:0; font:600 .7rem var(--sans); letter-spacing:.14em; text-decoration:none; white-space:nowrap; cursor:pointer; }
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes coming-soon-progress { from{transform:scaleX(0)} to{transform:scaleX(1)} }
 
 @media (max-width:900px) {
-  .coming-soon-actions { right:1.5rem; left:1.5rem; gap:1rem; }
+  .coming-soon-actions { right:1.5rem; left:1.5rem; width:auto; gap:1rem; }
   .coming-soon-signup .signup-row { align-items:stretch; flex-direction:column; gap:.6rem; }
   .coming-soon-signup .signup-fields { grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
   .coming-soon-signup button { align-self:flex-start; }
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   .coming-soon-location { display:none; }
   .coming-soon-content { top:6.5rem; }
   .coming-soon-kicker { margin-bottom:1rem; font-size:.76rem; line-height:1.6; }
-  .coming-soon-headline { min-height:3em; font-size:clamp(3.5rem,16vw,5.4rem); line-height:.86; }
+  .coming-soon-headline { min-height:3em; font-size:clamp(2.9rem,13vw,4.5rem); line-height:.86; }
   .coming-soon-copy { margin-top:1.5rem; font-size:1.2rem; line-height:1.5; }
   .coming-soon-signup .signup-row { align-items:stretch; flex-direction:column; gap:.6rem; }
   .coming-soon-signup .signup-fields { grid-template-columns:1fr; gap:.15rem; }
