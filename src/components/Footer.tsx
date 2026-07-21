@@ -112,16 +112,22 @@ export default function Footer() {
             />
             
             <div className="footer-socials">
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.tiktok.com/@the.haven.estate" target="_blank" rel="noreferrer" aria-label="The Haven Estate on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19.6 6.7a4.8 4.8 0 0 1-3.2-1.2A4.8 4.8 0 0 1 14.8 2h-3.2v13.4a2.8 2.8 0 1 1-2.4-2.8V9.4a6 6 0 1 0 5.6 6V8.9a8 8 0 0 0 4.8 1.6V6.7Z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/the.haven.estate/" target="_blank" rel="noreferrer" aria-label="The Haven Estate on Instagram">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                 </svg>
               </a>
-              <a href="#" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              <a href="https://www.youtube.com/@TheHavenEstate" target="_blank" rel="noreferrer" aria-label="The Haven Estate on YouTube">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8Z"/>
+                  <path d="m10 15 5-3-5-3v6Z"/>
                 </svg>
               </a>
             </div>
