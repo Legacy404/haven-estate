@@ -63,7 +63,7 @@ export default function Experiences() {
           >
             {/* Left Column: Portrait Image card */}
             <div className="experience-image-wrap">
-              <img src={exp.image} alt={exp.title} />
+              <img src={exp.image} alt={exp.title} loading="lazy" decoding="async" />
             </div>
 
             {/* Right Column: Slogan details */}

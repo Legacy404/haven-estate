@@ -97,7 +97,7 @@ export default function Packages() {
             >
               {/* Image Frame */}
               <div className="package-img-wrap">
-                <img src={pkg.image} alt={pkg.tagline} />
+                <img src={pkg.image} alt={pkg.tagline} loading="lazy" decoding="async" />
               </div>
 
               {/* Tag */}
