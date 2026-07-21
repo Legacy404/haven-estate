@@ -134,7 +134,7 @@ export default function ComingSoon() {
         buttonText="JOIN THE FIRST LOOK LIST"
         showArrow
       />
-      <a className="coming-soon-contact" href="mailto:hello@thehavenestate.com">CONTACT THE ESTATE <ArrowUpRight /></a>
+      <a className="coming-soon-contact" href="mailto:yorkhavenestate@gmail.com">CONTACT THE ESTATE <ArrowUpRight /></a>
     </motion.div>
 
     <div className="coming-soon-footer">
