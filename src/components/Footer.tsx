@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import MailerLiteSignup from './MailerLiteSignup';
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -104,16 +105,11 @@ export default function Footer() {
               Subscribe to receive exclusive dates, wedding guides, and open house notifications.
             </p>
             
-            <form onSubmit={(e) => { e.preventDefault(); alert("Subscribed!"); }} className="footer-form">
-              <input 
-                type="email" 
-                placeholder="YOUR EMAIL" 
-                required
-              />
-              <button type="submit">
-                JOIN
-              </button>
-            </form>
+            <MailerLiteSignup
+              className="footer-form"
+              formId="footer"
+              buttonText="JOIN THE FIRST LOOK LIST"
+            />
             
             <div className="footer-socials">
               <a href="#" aria-label="Instagram">
